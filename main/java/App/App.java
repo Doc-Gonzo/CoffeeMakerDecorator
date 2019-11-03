@@ -10,19 +10,19 @@ public class App {
         /* Plain Coffee */
         Coffee plainCoffee = new PlainCoffee();
         plainCoffee.printDesc();
-       System.out.print(". Der Preis betraegt " + plainCoffee.getPrice());
+       System.out.print(helper.priceString() + plainCoffee.getPrice());
         helper.endLine();
 
         /* Kaffee Latte */
         Coffee coffeeLatte = new MilkDeco(plainCoffee);
         coffeeLatte.printDesc();
-        System.out.print( ". Der Preis betraegt " + coffeeLatte.getPrice());
+        System.out.print(helper.priceString() + coffeeLatte.getPrice());
         helper.endLine();
 
         /*  Latte mit Schuss */
         Coffee latteMitSchuss = new MilkDeco(new AmarettoDeco(new PlainCoffee()));
         latteMitSchuss.printDesc();
-        System.out.print( ". Der Preis betraegt " + latteMitSchuss.getPrice());
+        System.out.print(helper.priceString() + latteMitSchuss.getPrice());
         helper.endLine();
     }
 }
